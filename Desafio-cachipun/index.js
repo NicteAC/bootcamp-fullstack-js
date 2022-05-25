@@ -1,3 +1,6 @@
+$(document).ready(function () {
+  $(".my__modal").modal("show");
+});
 var jugadaUsuario = Swal.fire({
   title: `Ingresa tu jugada:
     Piedra 👊= 0
