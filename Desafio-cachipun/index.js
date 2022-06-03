@@ -3,6 +3,14 @@ Maximo de 5 jugadas`);
 var piedra = 0;
 var papel = 1;
 var tijeras = 2;
+var jugadaUsuario = prompt(
+  `Ingresa tu jugada equivalente a:
+    Piedra 👊= 0
+    Papel 🖐= 1
+    Tijeras ✌= 2`
+)
+
+
 function juego(jugador, maquina) {
   if (!jugador) return;
   if (jugador === maquina) {
