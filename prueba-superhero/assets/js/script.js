@@ -1,11 +1,14 @@
 $(document).ready(function () {
   $("#boton").on("click", function () {
+    const regExp =  /^[0-9]+$/gi;
     let idInput = $("#id_heroe").val();
+   if(idInput !== "" && regExp.test(idInput) === true){
     $.ajax({
       type: "GET",
       url: `https://superheroapi.com/api.php/2205097786306548/${idInput}`,
       dataType: "json",
       success: function (datosApi) {
+        console.log(idInput.match(regExp)); 
         $("#nombre").text(datosApi.name);
         $("#connections").text(datosApi.connections["group-affiliation"]);
         $("#publisher").text(datosApi.biography.publisher);
@@ -46,5 +49,8 @@ $(document).ready(function () {
         console.error(error);
       },
     });
+   }else{
+    alert("El id debe ser un numero entero");
+   }
   });
 });

@@ -12,6 +12,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
     <nav class="navbar navbar-dark bg-dark">
@@ -20,30 +21,30 @@
       </div>
     </nav>
     <main>
-      <section>
-        <img src="./assets/img/sh1.jpg" alt="" />
-        <h1>Encuentra tu SuperHero</h1>
+      <section class="search__wrapper">
+        <img src="./assets/img/sh1.jpg" alt="logo superhero" class="search__img"/>
+        <h1 class="search__title">Encuentra tu SuperHero</h1>
         <div class="input-group mb-3">
           <input
           id="id_heroe"
             type="text"
-            class="form-control"
+            class="form-control search__input"
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default"
             style="max-width: 540px"
           />
         </div>
-        <button type="button" id="boton" class="btn btn-primary">Primary</button>
+        <button type="button" id="boton" class="btn btn-primary search__boton">Primary</button>
       </section>
-      <section>
+      <section >
         <h2>SuperHero Encontrado</h2>
-       <div class="container d-flex">
-        <div class="card mb-3" >
+       <div class="d-flex">
+        <div class="card mb-3" style="width: 700px;">
           <div class="row g-0">
-            <div class="col-md-4">
-              <img id="imagen" src="" class="img-fluid rounded-start" alt="..." />
+            <div class="col-md-3">
+              <img id="imagen" src="./assets/img/sh2.jpg" class="img-fluid rounded-start" alt="..." />
             </div>
-            <div class="col-md-8">
+            <div class="col-md-9">
               <div class="card-body">
                <ul class="list-group list-group-flush">
                  <li class="list-group-item">
@@ -63,7 +64,7 @@
             </div>
           </div>
         </div>
-        <div class="card">
+        <div class="container-graph">
           <div id="chartContainer" style="height: 370px; width: 100%;"></div>
         </div>
        </div>
