@@ -131,9 +131,42 @@ let dental = [
   },
 ];
 document.write(`
-<p>Primera atención: ${radiologia[0].paciente} - ${radiologia[0].prevision} | Última atención: ${radiologia[4].paciente} - ${radiologia[4].prevision}</p>
-<p>Primera atención: ${traumatologia[0].paciente} - ${traumatologia[0].prevision} | Última atención: ${traumatologia[6].paciente} - ${traumatologia[6].prevision}</p>
-<p>Primera atención: ${dental[0].paciente} - ${dental[0].prevision} | Última atención: ${dental[5].paciente} - ${dental[5].prevision}</p>`);
+<p>Primera atención radiologia: ${radiologia[0].paciente} - ${radiologia[0].prevision} | Última atención radiologia: ${radiologia[4].paciente} - ${radiologia[4].prevision}</p>
+<p>Primera atención traumatologia: ${traumatologia[0].paciente} - ${traumatologia[0].prevision} | Última atención traumatologia: ${traumatologia[6].paciente} - ${traumatologia[6].prevision}</p>
+<p>Primera atención dental: ${dental[0].paciente} - ${dental[0].prevision} | Última atención dental: ${dental[5].paciente} - ${dental[5].prevision}</p>`);
+const fila1 = document.querySelector(".datos1");
+radiologia.forEach((item) => {
+  fila1.innerHTML += `
+  <tr>
+  <td> ${item.hora} </td>
+  <td> ${item.especialista} </td>
+    <td> ${item.paciente}</td>
+    <td>${item.rut}</td>
+    <td>${item.prevision}</td>
+  </tr>`;
+});
+const fila = document.querySelector(".datos");
+traumatologia.forEach((item) => {
+  fila.innerHTML += `
+  <tr>
+  <td> ${item.hora} </td>
+  <td> ${item.especialista} </td>
+    <td> ${item.paciente}</td>
+    <td>${item.rut}</td>
+    <td>${item.prevision}</td>
+  </tr>`;
+});
+const fila2 = document.querySelector(".datos2");
+dental.forEach((item) => {
+  fila2.innerHTML += `
+  <tr>
+  <td> ${item.hora} </td>
+  <td> ${item.especialista} </td>
+    <td> ${item.paciente}</td>
+    <td>${item.rut}</td>
+    <td>${item.prevision}</td>
+  </tr>`;
+});
 
 console.table(radiologia);
 console.table(traumatologia);

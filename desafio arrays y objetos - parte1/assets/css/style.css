@@ -1,0 +1,14 @@
+table {
+  border: 1px solid black;
+}
+th {
+  width: 10rem;
+  border: 1px solid black;
+}
+tbody {
+  text-align: center;
+  line-height: 2rem;
+}
+td {
+  border: 1px solid black;
+}
