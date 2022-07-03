@@ -13,7 +13,7 @@ document.getElementById("buttonImages").addEventListener("click", async () => {
 
   document.querySelectorAll(".personajes img").forEach((i) => {
     i.addEventListener("click", (event) => {
-      $("#imagenesModal").modal("toggle");
+     $("#imagenesModal").modal("toggle");
       const imagenSrc = event.target.src;
       document.getElementById(
         "preview"
