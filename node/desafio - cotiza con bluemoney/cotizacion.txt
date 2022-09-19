@@ -1,0 +1,5 @@
+
+    A la fecha Thu Sep 15 2022 00:00:00 GMT-0300 (hora de verano de Chile)
+    Fue realizada la cotización con los siguientes datos:
+    Cantidad de pesos a convertir: 100000 CLP
+    Convertido a "dólar da un total de: 109.03817426481011 USD.
